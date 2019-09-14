@@ -324,7 +324,7 @@ AOS.init({
 
     function makeTimer() {
 
-        var endTime = new Date("25 October 2019 9:00:00 GMT+05:30");
+        var endTime = new Date("16 October 2019 00:00:00 GMT+05:30");
         endTime = (Date.parse(endTime) / 1000);
 
         var now = new Date();
