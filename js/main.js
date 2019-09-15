@@ -81,7 +81,9 @@ AOS.init({
                 1000: {
                     items: 3
                 }
-            }
+            },
+            touchDrag: true,
+            mouseDrag: false
         });
 
         $('.carousel-speaker').owlCarousel({
