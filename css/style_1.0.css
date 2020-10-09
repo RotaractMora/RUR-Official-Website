@@ -103,6 +103,7 @@ h6 {
 }
 
 p {
+    color: #444;
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -10066,6 +10067,16 @@ h5,
     color: #6b76ff;
     line-height: 1;
     font-weight: 900;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#0e0474', endColorstr='#14b2fa', GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-blue {
+    color: #6b76ff;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    background-clip: text !important;
     background: #0147af;
     background: -moz-linear-gradient(-455deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, #0e0474), color-stop(0%, #0147af), color-stop(100%, #14b2fa));
@@ -10073,9 +10084,6 @@ h5,
     background: -o-linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
     background: -ms-linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
     background: linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6b75ff', endColorstr='#59b7ff', GradientType=1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 991.98px) {
@@ -12010,6 +12018,39 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-session-reg {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.clock {
+    font-family: sans-serif;
+    color: #666;
+    display: flex;
+    font-weight: 100;
+    text-align: center;
+    font-size: 45px;
+    justify-content: center;
+}
+
+.clock>div {
+    padding: 10px;
+    display: inline-block;
+}
+
+.clockd div>span {
+    padding: 15px;
+    border-radius: 3px;
+    background: #00816A;
+    display: inline-block;
+}
+
+.smalltext {
+    font-size: 12px;
 }
 
 @-webkit-keyframes loader-rotate {
