@@ -12053,44 +12053,67 @@ textarea.form-control {
     font-size: 12px;
 }
 
+.partner {
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #444;
+    align-self: center;
+}
+
+.partner span {
+    font-weight: 600;
+}
+
+.partner img {
+    min-width: 200px;
+}
+
+#reachus h5 {
+    font-weight: 900;
+    color: #0f47b7;
+}
+
+
+}
 @-webkit-keyframes loader-rotate {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
-
 @keyframes loader-rotate {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
-
 @-webkit-keyframes loader-dash {
     0% {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
+    
     50% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -35px;
     }
+    
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
     }
 }
-
 @keyframes loader-dash {
     0% {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
+    
     50% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -35px;
     }
+    
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
