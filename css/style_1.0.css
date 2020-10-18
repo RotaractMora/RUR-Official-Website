@@ -12073,47 +12073,58 @@ textarea.form-control {
     color: #0f47b7;
 }
 
-
+.modal {
+    padding-right: 0 !important;
 }
+
+.modal ul li {
+    color: #666
+}
+
+@media(min-width:900px) {
+    .modal .modal-dialog {
+        max-width: 800px;
+    }
+}
+
 @-webkit-keyframes loader-rotate {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
+
 @keyframes loader-rotate {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
+
 @-webkit-keyframes loader-dash {
     0% {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
-    
     50% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -35px;
     }
-    
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
     }
 }
+
 @keyframes loader-dash {
     0% {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
-    
     50% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -35px;
     }
-    
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
