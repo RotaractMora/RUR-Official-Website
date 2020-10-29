@@ -12081,9 +12081,35 @@ textarea.form-control {
     color: #666
 }
 
+.navbar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navbar ul>li {
+    float: left;
+}
+
+.navbar ul>li>h5 {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: none;
+}
+
+.navbar.scrolled ul>li>h5 {
+    display: block;
+}
+
 @media(min-width:900px) {
     .modal .modal-dialog {
         max-width: 800px;
+    }
+}
+
+@media(max-width:400px) {
+    .navbar ul>li>h5 {
+        font-size: 15px;
+        margin-top: 20px;
     }
 }
 
