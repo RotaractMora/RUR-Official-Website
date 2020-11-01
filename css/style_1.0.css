@@ -12100,6 +12100,18 @@ textarea.form-control {
     display: block;
 }
 
+@media(max-width:576px) {
+    .project-chairperson {
+        max-width: 200px !important;
+    }
+}
+
+@media(max-width:992px) {
+    .hero-wrap i {
+        font-size: 15px;
+    }
+}
+
 @media(min-width:900px) {
     .modal .modal-dialog {
         max-width: 800px;
@@ -12110,6 +12122,9 @@ textarea.form-control {
     .navbar ul>li>h5 {
         font-size: 15px;
         margin-top: 20px;
+    }
+    .hero-wrap i {
+        font-size: 12px;
     }
 }
 
