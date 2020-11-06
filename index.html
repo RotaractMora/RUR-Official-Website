@@ -111,14 +111,14 @@
                 <div class="col-md-4">
                     <div class="row align-items-center">
                         <div class="col text-center">
-                            <a>
-                                <div class="btn-session-reg" style="background:#ecd52f;">Registrations will open soon</div>
+                            <a data-target="#headsUpRegModal" data-toggle="modal">
+                                <div class="btn-session-reg" style="background:#ecd52f;cursor: pointer;">Registrations now open</div>
                             </a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div class="clock" data-countdown="11/09/2020 18:00:00"></div>
+                            <div class="clock" data-countdown="11/11/2020 18:00:00"></div>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
         </div>
     </section>
 
-    <!-- <section class="ftco-section bg-light" id="partners">
+    <section class="ftco-section bg-light" id="partners">
         <div class="container">
             <div class="row d-flex pt-1 pt-md-4">
                 <div class="col text-center pl-md-5 py-5">
@@ -266,16 +266,18 @@
             </div>
 
             <div class="row mb-5">
-                <div class="offset-md-1 col-md-4 partner text-center">
-                    <span>STRATEGIC</span> PARTNER<br>
-                    <img src="images/sponsor/RUR20.png" class="col-8 col-md-2 mt-4" alt="Stratergic partner">
+                <div class="offset-md-1 col-md-4 partner text-center mb-5">
+                    <!-- <span>STRATEGIC</span> PARTNER<br> -->
+                    <span>OFFICIAL PLATINUM</span> PARTNER<br>
+                    <img src="images/sponsor/lseg.png" class="col-12 col-md-12 mt-4" alt="Official platinum partner">
                 </div>
-                <div class="offset-md-2 col-md-4 partner text-center">
-                    <span>PLATINUM</span> PARTNER<br>
-                    <img src="images/sponsor/RUR20.png" class="col-8 col-md-2 mt-4" alt="Platinum partner">
+                <div class="offset-md-2 col-md-4 partner text-center mb-5">
+                    <!-- <span>PLATINUM</span> PARTNER<br> -->
+                    <span>OFFICIAL TELECOMMUNICATION</span> PARTNER<br>
+                    <img src="images/sponsor/dialog.png" class="col-8 col-md-6 mt-4" alt="Official telecommunication partner">
                 </div>
             </div>
-            <div class="row mb-5">
+            <!-- <div class="row mb-5">
                 <div class="col-md-4 partner text-center">
                     <span>GOLD</span> PARTNER<br>
                     <img src="images/sponsor/RUR20.png" class="col-8 col-md-2 mt-4" alt="gold partner">
@@ -438,9 +440,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-    </section> -->
+    </section>
 
     <section class="ftco-section" id="reachus">
         <div class="container">
@@ -789,6 +791,23 @@
         </div>
     </div>
 
+    <div class="modal fade" id="headsUpRegModal" tabindex="-1" role="dialog" aria-labelledby="HeadsUpRegModalTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background: rgb(241, 233, 166);">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body headsUpRegModal">
+                    <iframe id="headsUpForm" src="https://docs.google.com/forms/d/e/1FAIpQLScQwT2ZISoae0mZ4Zhgs-FhVNBOcsgRgoTVC_bZ11AnJsTolA/viewform?embedded=true" width="640" height="1150" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -805,7 +824,13 @@
     <script src="js/scrollax.min.js"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main_1.0.js"></script>
-
+    <script>
+        setInterval(() => {
+            if ($('.headsUpRegModal').width() !== $('#headsUpForm').width())
+                $('#headsUpForm').attr('width', $('.headsUpRegModal').width());
+            console.log(document.getElementById('headsUpForm').scrollHeight);
+        }, 500)
+    </script>
 </body>
 
 </html>
