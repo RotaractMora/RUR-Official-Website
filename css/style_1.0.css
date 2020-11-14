@@ -12100,6 +12100,10 @@ textarea.form-control {
     display: block;
 }
 
+.newline {
+    display: none;
+}
+
 @media(max-width:576px) {
     .project-chairperson {
         max-width: 200px !important;
@@ -12125,6 +12129,18 @@ textarea.form-control {
     }
     .hero-wrap i {
         font-size: 12px;
+    }
+}
+
+@media(max-width:1199px) {
+    .newline {
+        display: block;
+    }
+}
+
+@media(max-width:767px) {
+    .newline {
+        display: none;
     }
 }
 
