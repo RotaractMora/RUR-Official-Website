@@ -12104,6 +12104,41 @@ textarea.form-control {
     display: none;
 }
 
+.company-box {
+    height: 215px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.company-logo {
+    background-image: url('images/sponsor/dialog-01.png');
+    height: 70px;
+    position: absolute;
+    background-size: contain;
+    width: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 70px;
+    background-color: #fff;
+    left: 40px;
+    box-shadow: 0 0 10px rgba(14, 8, 8, 0.2);
+}
+
+.company-name {
+    padding: 50px 20px 10px 20px;
+    color: #0354b8;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.company-banner {
+    background: linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
+    background-size: cover;
+    height: 100px;
+    background-position: center;
+}
+
 @media(max-width:576px) {
     .project-chairperson {
         max-width: 200px !important;
