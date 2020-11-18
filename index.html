@@ -309,7 +309,7 @@
         </div>
     </section>
 
-    <section class="ftco-section bg-light" style="padding-top: 0;" id="companies">
+    <!-- <section class="ftco-section bg-light" style="padding-top: 0;" id="companies">
         <div class="container">
             <div class="row d-flex pt-1 pt-md-4">
                 <div class="col text-center pl-md-5 py-5">
@@ -319,7 +319,7 @@
 
             <div class="row" id="company-data"></div>
         </div>
-    </section>
+    </section> -->
 
     <section class="ftco-section" id="reachus">
         <div class="container">
@@ -416,6 +416,36 @@
             </div>
         </div>
     </section>
+
+    <footer id="footer">
+
+        <div class="container text-center py-4">
+
+            <div class="mr-md-auto mb-3 text-center">
+                <div class="copyright" style="text-align: center;">
+                    &copy; Copyright <span>Rotaract Club of University of Moratuwa</span>
+                </div>
+
+            </div>
+            <div class="social-links text-center pt-3 pt-md-0">
+                <a href="#" class="facebook">
+                    <ion-icon name="logo-facebook" class="ion-logo-facebook"></ion-icon>
+                </a>
+                <a href="#" class="instagram">
+                    <ion-icon name="logo-instagram" class="ion-logo-instagram"></ion-icon>
+                </a>
+                <a href="#" class="linkedin">
+                    <ion-icon name="logo-linkedin" class="ion-logo-linkedin"></ion-icon>
+                </a>
+                <a href="#" class="twitter">
+                    <ion-icon name="logo-twitter" class="ion-logo-twitter"></ion-icon>
+                </a>
+                <a href="#" class="youtube">
+                    <ion-icon name="logo-youtube" class="ion-logo-youtube"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- loader -->
@@ -770,51 +800,51 @@
             // console.log(document.getElementById('theForumForm').scrollHeight, $('.theForumRegModal').width());
         }, 500)
 
-        fetch('https://are-you-ready-2020-staging.web.app/api/public/RUR-2020/companies')
+        fetch('https://5e65383da49c210016106dd3.mockapi.io/api/v1/companies')
             .then(res => res.json())
             .then(data => {
                 let result = '';
                 let modals = '';
-                console.log(data)
-                data.data.forEach(e => {
-                    result += '<!--<div class="col-lg-4 col-md-6 mb-4">\
-                        <div class="company-box">\
-                            <div class="company-banner" style="background-image:url(\'' + e.bannerUrl + '\');"></div>\
-                            <div class="company-logo" style="background-image:url(\'' + e.logoUrl + '\');"></div>\
-                            <div class="company-name">\
-                                <a href="" data-toggle="modal" data-target="#' + e.companyId + '-Modal">' + e.name + '</a>\
-                            </div>\
-                        </div>\
-                    </div>-->';
+                console.log(data);
+                // data.forEach(e => {
+                //     result += '<!--<div class="col-lg-4 col-md-6 mb-4">\
+                //         <div class="company-box">\
+                //             <div class="company-banner" style="background-image:url(\'' + e.bannerUrl + '\');"></div>\
+                //             <div class="company-logo" style="background-image:url(\'' + e.logoUrl + '\');"></div>\
+                //             <div class="company-name">\
+                //                 <a href="" data-toggle="modal" data-target="#' + e.companyId + '-Modal">' + e.name + '</a>\
+                //             </div>\
+                //         </div>\
+                //     </div>-->';
 
-                    modals += '<div class="modal fade" id="' + e.companyId + '-Modal" tabindex="-1" role="dialog" aria-labelledby="' + e.shortenedName + 'ModalTitle" aria-hidden="true">\
-                        <div class="modal-dialog" role="document">\
-                            <div class="modal-content">\
-                                <div class="modal-header">\
-                                    <h5 class="modal-title" id="' + e.shortenedName + 'ModalTitle">' + e.name + '</h5>\
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">\
-                                        <span aria-hidden="true">&times;</span>\
-                                    </button>\
-                                </div>\
-                                <div class="modal-body">\
-                                    <div class="container-fluid">\
-                                        <div class="row text-center">\
-                                            <div class="col-md-8 offset-md-2">\
-                                                <img src="' + e.logoUrl + '" class="img-fluid mb-4" alt="' + e.name + '">\
-                                            </div>\
-                                        </div>\
-                                    </div>\
-                                    <p>' + e.description + '</p>\
-                                </div>\
-                                <div class="modal-footer">\
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>';
-                });
-                document.getElementById('company-data').innerHTML = result;
-                document.getElementById('company-modals').innerHTML = modals;
+                //     modals += '<div class="modal fade" id="' + e.companyId + '-Modal" tabindex="-1" role="dialog" aria-labelledby="' + e.shortenedName + 'ModalTitle" aria-hidden="true">\
+                //         <div class="modal-dialog" role="document">\
+                //             <div class="modal-content">\
+                //                 <div class="modal-header">\
+                //                     <h5 class="modal-title" id="' + e.shortenedName + 'ModalTitle">' + e.name + '</h5>\
+                //                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">\
+                //                         <span aria-hidden="true">&times;</span>\
+                //                     </button>\
+                //                 </div>\
+                //                 <div class="modal-body">\
+                //                     <div class="container-fluid">\
+                //                         <div class="row text-center">\
+                //                             <div class="col-md-8 offset-md-2">\
+                //                                 <img src="' + e.logoUrl + '" class="img-fluid mb-4" alt="' + e.name + '">\
+                //                             </div>\
+                //                         </div>\
+                //                     </div>\
+                //                     <p>' + e.description + '</p>\
+                //                 </div>\
+                //                 <div class="modal-footer">\
+                //                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>\
+                //                 </div>\
+                //             </div>\
+                //         </div>\
+                //     </div>';
+                // });
+                // document.getElementById('company-data').innerHTML = result;
+                // document.getElementById('company-modals').innerHTML = modals;
             }).catch(err => {
                 console.log(err);
             })
