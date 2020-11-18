@@ -12127,6 +12127,7 @@ textarea.form-control {
     box-shadow: 0 0 10px rgba(14, 8, 8, 0.2);
     transition: all 0.2s ease-in;
     padding: 5px;
+    z-index: 10;
 }
 
 .company-logo-container {
