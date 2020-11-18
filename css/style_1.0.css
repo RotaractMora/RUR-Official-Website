@@ -12108,20 +12108,33 @@ textarea.form-control {
     height: 215px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.company-box:hover {
+    scale: 1.1;
 }
 
 .company-logo {
-    background-image: url('images/sponsor/dialog-01.png');
+    background-color: #fff;
     height: 70px;
-    position: absolute;
-    background-size: contain;
     width: 70px;
+    position: relative;
+    top: -35px;
+    left: 30px;
+    box-shadow: 0 0 10px rgba(14, 8, 8, 0.2);
+    transition: all 0.2s ease-in;
+    padding: 5px;
+}
+
+.company-logo-container {
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    top: 70px;
-    background-color: #fff;
-    left: 40px;
-    box-shadow: 0 0 10px rgba(14, 8, 8, 0.2);
+    width: 60px;
+    height: 60px;
 }
 
 .company-name {
@@ -12130,6 +12143,9 @@ textarea.form-control {
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
+    position: relative;
+    top: -70px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .company-banner {
@@ -12143,7 +12159,6 @@ textarea.form-control {
     color: #444444;
     font-size: 14px;
     background: #f1f3ff;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 #footer .footer-top {
@@ -12241,7 +12256,7 @@ textarea.form-control {
 }
 
 #footer .social-links a:hover {
-    background: #3b4ef8;
+    background: #084cee;
     color: #fff;
     text-decoration: none;
 }
