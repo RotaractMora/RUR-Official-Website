@@ -11945,7 +11945,8 @@ textarea.form-control {
     font-style: italic;
 }
 
-#ftco-loader {
+#ftco-loader,
+#company-loader {
     position: fixed;
     width: 96px;
     height: 96px;
@@ -11966,7 +11967,8 @@ textarea.form-control {
     z-index: 1000;
 }
 
-#ftco-loader.fullscreen {
+#ftco-loader.fullscreen,
+#company-loader.fullscreen {
     padding: 0;
     left: 0;
     top: 0;
@@ -11981,7 +11983,8 @@ textarea.form-control {
     box-shadow: none;
 }
 
-#ftco-loader.show {
+#ftco-loader.show,
+#company-loader.show {
     -webkit-transition: opacity .4s ease-out, visibility 0s linear 0s;
     -o-transition: opacity .4s ease-out, visibility 0s linear 0s;
     transition: opacity .4s ease-out, visibility 0s linear 0s;
@@ -11989,7 +11992,8 @@ textarea.form-control {
     opacity: 1;
 }
 
-#ftco-loader .circular {
+#ftco-loader .circular,
+#company-loader .circular {
     -webkit-animation: loader-rotate 2s linear infinite;
     animation: loader-rotate 2s linear infinite;
     position: absolute;
@@ -12001,7 +12005,8 @@ textarea.form-control {
     transform: rotate(0deg);
 }
 
-#ftco-loader .path {
+#ftco-loader .path,
+#company-loader .path {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
     -webkit-animation: loader-dash 1.5s ease-in-out infinite;
@@ -12127,7 +12132,7 @@ textarea.form-control {
     box-shadow: 0 0 10px rgba(14, 8, 8, 0.2);
     transition: all 0.2s ease-in;
     padding: 5px;
-    z-index: 10;
+    z-index: 2;
 }
 
 .company-logo-container {

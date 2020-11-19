@@ -183,6 +183,7 @@
                 <div class="col-md-4">
                     <div class="row align-items-center">
                         <div class="col text-center">
+                            <!-- <a href="" data-target="#theImageRegModal" data-toggle="modal"> -->
                             <a>
                                 <div class="btn-session-reg" style="background:#ba1b20;">Registrations will open soon</div>
                             </a>
@@ -741,16 +742,16 @@
         </div>
     </div>
 
-    <div class="modal fade" id="theForumRegModal" tabindex="-1" role="dialog" aria-labelledby="TheForumRegModalTitle" aria-hidden="true">
+    <div class="modal fade" id="theImageRegModal" tabindex="-1" role="dialog" aria-labelledby="TheImageRegModalTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background:#dabbe5;">
+            <div class="modal-content" style="background:rgb(240, 191, 194);">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
                 </div>
-                <div class="modal-body theForumRegModal">
-                    <iframe id="theForumForm" src="https://docs.google.com/forms/d/e/1FAIpQLScT8codko0K0JDTC3V3_cr79KCbIDuje72r9WwB8ATUBeC5gA/viewform?embedded=true" width="640" height="1280" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div class="modal-body theImageRegModal">
+                    <iframe id="theImageForm" src="https://docs.google.com/forms/d/e/1FAIpQLSc35IY-SjUQIX7nBK0y-coQcajLrOCk2sID9rh_Nfqh7E0aUA/viewform?embedded=true" width="640" height="1020" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -803,11 +804,17 @@
     <script src="js/main_1.0.js"></script>
     <script>
         setInterval(() => {
-            if ($('.theForumRegModal').width() !== $('#theForumForm').width())
-                $('#theForumForm').attr('width', $('.theForumRegModal').width());
+            if ($('.theImageRegModal').width() !== $('#theImageForm').width())
+                $('#theImageForm').attr('width', $('.theImageRegModal').width());
             // console.log(document.getElementById('theForumForm').scrollHeight, $('.theForumRegModal').width());
         }, 500)
 
+        document.getElementById('company-data').innerHTML = '<div id="company-loader" class="show fullscreen">\
+            <svg class="circular" width="48px" height="48px">\
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>\
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>\
+            </svg>\
+        </div>';
         fetch('https://areyouready.rotaract.social/api/public/RUR-2020/companies')
             .then(res => res.json())
             .then(data => {
@@ -864,6 +871,7 @@
                 document.getElementById('company-modals').innerHTML = modals;
             }).catch(err => {
                 console.log(err);
+                document.getElementById('company-data').innerHTML = '<div class="col text-center"><i>Error while loading company data</i></div>';
             })
     </script>
 </body>
