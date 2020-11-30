@@ -12267,6 +12267,10 @@ textarea.form-control {
     text-decoration: none;
 }
 
+.list-inline li {
+    display: inline-block;
+}
+
 @media(max-width:576px) {
     .project-chairperson {
         max-width: 200px !important;
