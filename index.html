@@ -881,7 +881,8 @@
             .then(data => {
                 let result = '';
                 let modals = '';
-                data.data.forEach(e => {
+                let companyList = [...data.data.filter(e => e.bannerUrl != null), ...data.data.filter(e => e.bannerUrl == null)];
+                companyList.forEach(e => {
                     result += '<div class="col-lg-4 col-md-6 mb-4">\
                         <a href="" data-toggle="modal" data-target="#' + e.companyId + '-Modal">\
                             <div class="company-box">\
