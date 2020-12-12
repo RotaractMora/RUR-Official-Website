@@ -879,9 +879,11 @@
         fetch('https://areyouready.rotaract.social/api/public/RUR-2020/companies')
             .then(res => res.json())
             .then(data => {
-                let result = '';
-                let modals = '';
+                let result = '',
+                    modals = '';
+                const cvOnly = ['CodeGen International (Pvt) Ltd', 'Pearson Lanka', 'Sanken Construction (Pvt) Ltd.', 'SriLankan Airlines Ltd.', 'hSenid Mobile Solutions '];
                 let companyList = [...data.data.filter(e => e.bannerUrl != null), ...data.data.filter(e => e.bannerUrl == null)];
+
                 companyList.forEach(e => {
                     result += '<div class="col-lg-4 col-md-6 mb-4">\
                         <a href="" data-toggle="modal" data-target="#' + e.companyId + '-Modal">\
@@ -913,6 +915,7 @@
                                         </div>\
                                     </div>\
                                     <p>' + e.description + '</p>\
+                                    <div style="font-size: 14px;">' + (cvOnly.includes(e.name) ? '<span class="cv">CV only</span>&nbsp;&nbsp;This company will review CVs, however will not conduct interviews at the flagship fair' : '') + '</div>\
                                     <h5>Prefered fields</h5>\
                                     <ul>';
 
