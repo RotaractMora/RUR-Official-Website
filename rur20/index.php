@@ -45,7 +45,8 @@
             $pdf->AddFont('montserrat','B','montserrat.regular.php');
             $pdf->AddFont('montserrat','','montserrat.light.php');
             $pdf->AddPage();
-            $pdf->Image('certificate/RUR_Certificate.jpg',0,0,-288,-288);
+
+            $pdf->Image('certificate/RUR_Certificate_'.$entry['type'].'.jpg',0,0,-288,-288);
             
             $pdf->SetFont('montserrat','B',18);
             $pdf->MultiCell(0,8,$entry['name'],0,'C');
