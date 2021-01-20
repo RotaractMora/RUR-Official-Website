@@ -1,8 +1,5 @@
 <?php
     
-    $l1=133;
-    $l2=121;
-    $l3=113;
     $found=false;
 
     if($_GET['certificate_id'] == null){
@@ -13,7 +10,7 @@
 
         $arr = json_decode($f,true)['Certificate'];
 
-        $startIndex = 0;
+        /* $startIndex = 0;
         $stopIndex = count($arr);
         $middle = floor(($stopIndex + $startIndex)/2);
  
@@ -51,6 +48,33 @@
             $pdf->SetFont('montserrat','B',18);
             $pdf->MultiCell(0,8,$entry['name'],0,'C');
             $pdf->Output('I', 'Are You Ready? 2020 - '.$entry['name'].'.pdf');
+        } */
+
+        foreach($arr as $row) {
+            if($row['certificate_id'] == $certificate_id) {
+                $found = true;
+                $entry = $row;
+                break;
+            }
+        }
+        
+        if($found){
+            require('fpdf/fpdf.php');            
+
+            $pdf = new FPDF('L','mm','A4');
+            $pdf->SetTitle('Are You Ready? 2020 | Certificate Verification');
+            $pdf->SetTopMargin(105);
+            $pdf->AddFont('montserrat','B','montserrat.regular.php');
+            $pdf->AddFont('montserrat','','montserrat.light.php');
+            $pdf->AddPage();
+
+            $pdf->Image('certificate/RUR_Certificate_'.$entry['type'].'.jpg',0,0,-288,-288);
+            
+            $pdf->SetFont('montserrat','B',18);
+            $pdf->MultiCell(0,8,$entry['name'],0,'C');
+            $pdf->Output('I', 'Are You Ready? 2020 - '.$entry['name'].'.pdf');
+        }else{
+            header('Location: http://www.areyouready.uom.lk/');
         }
     }
 ?>
