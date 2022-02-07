@@ -141,7 +141,7 @@
             </div>
 
             <!-- Heads Up-->
-            <div class="row pt-5" id="headsup">
+            <div class="row pt-5 align-items-center" id="headsup">
                 <div class="col-md-4">
                     <img class="img-fluid" src="images/HeadsUp1.png" alt="Heads Up" />
                 </div>
@@ -158,16 +158,16 @@
                             </a>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col">
                             <div class="clock" data-countdown="12/15/2021 18:00:00"></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
             <!-- The Forum-->
-            <div class="row pt-5" id="theforum">
+            <div class="row pt-5 align-items-center" id="theforum">
                 <div class="col-md-4">
                     <img class="img-fluid" src="images/TheForum1.png" alt="The Forum" />
                 </div>
@@ -184,16 +184,16 @@
                             </a>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col">
                             <div class="clock" data-countdown="12/17/2021 18:00:00"></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
             <!-- The Image-->
-            <div class="row pt-5" id="theimage">
+            <div class="row pt-5 align-items-center" id="theimage">
                 <div class="col-md-4">
                     <img class="img-fluid" src="images/TheImage1.png" alt="The Image" />
                 </div>
@@ -206,7 +206,7 @@
                 <div class="col-md-4">
                     <div class="row align-items-center">
                         <div class="col text-center">
-                            <a href="https://fb.watch/1Wbjca8THw/" target="_blank">
+                            <a href="" data-toggle="modal" data-target="#theImageModal">
                                 <div class="btn-session-reg" style="background:#ba1b20;">
                                     <!--<ion-icon name="logo-facebook" class="ion-logo-facebook" style="font-size:20px;"></ion-icon>-->&nbsp;&nbsp;Stay tuned</div>
                             </a>
@@ -221,7 +221,7 @@
             </div>
 
             <!-- Resume Center-->
-            <div class="row pt-5" id="resumecentre">
+            <div class="row pt-5 align-items-center" id="resumecentre">
                 <div class="col-md-4">
                     <img class="img-fluid" src="images/ResumeCentre1.png" alt="Resume Center" />
                 </div>
@@ -234,7 +234,7 @@
                 <div class="col-md-4">
                     <div class="row align-items-center">
                         <div class="col text-center">
-                            <a href="" data-toggle="modal" data-target="#resumeCentreRegModal">
+                            <a href="" data-toggle="modal" data-target="#resumeCenterModal">
                                 <div class="btn-session-reg" style="background:#13b703;">Stay tuned</div>
                             </a>
                         </div>
@@ -248,7 +248,7 @@
             </div>
 
             <!-- Career Insights-->
-            <div class="row pt-5" id="careerinsights">
+            <div class="row pt-5 align-items-center" id="careerinsights">
                 <div class="col-md-4">
                     <img class="img-fluid" src="images/CareerInsights1.png" alt="Career Insights" />
                 </div>
@@ -276,7 +276,7 @@
             </div>
 
             <!-- Flagship day-->
-            <div class="row mb-0 mb-md-5 pt-5" id="flagshipfair">
+            <div class="row mb-0 mb-md-5 pt-5 align-items-center" id="flagshipfair">
                 <div class="col-md-4">
                     <img class="img-fluid" src="images/Flagshipday1.png" alt="Flagship Fair" />
                 </div>
@@ -289,7 +289,7 @@
                     <div class="row align-items-center">
                         <div class="col text-center">
                             <a href="https://rotaract.social/reg" target="_blank">
-                                <div class="btn-session-reg" style="background:#0f3aa1;">Stay tuned</div>
+                                <div class="btn-session-reg" style="background:#0f3aa1;">Undergraduate registrations has been opened</div>
                             </a>
                         </div>
                     </div>
@@ -321,11 +321,11 @@
                 <div class="row mb-7">
                     <div class="col-md-4 partner text-center">
                         <span>PLATINUM</span> PARTNER<br>
-                        <img src="images/sponsor/MAS-logo.jpg" class="col-5 col-md-3 mt-2" alt="Platinum partner">
+                        <img src="images/sponsor/dialog.png" class="col-5 col-md-4 mt-2" alt="Platinum partner">
                     </div>
                     <div class="col-md-4 partner text-center">
                         <span>GOLD</span> PARTNER<br>
-                        <img src="images/sponsor/dialog.png" class="col-5 col-md-3 mt-2" alt="Gold partner">
+                        <img src="images/sponsor/MAS-logo.jpg" class="col-5 col-md-4 mt-2" alt="Gold partner">
                     </div>
                     <div class="col-md-4 partner text-center">
                         <span>SILVER</span> PARTNER<br>
@@ -907,7 +907,7 @@
                 <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>\
             </svg>\
         </div>';
-        fetch('https://areyouready.rotaract.social/api/public/RUR-2020/companies')
+        fetch('https://rur.rotaract.social/api/public/RUR-2021/companies')
             .then(res => res.json())
             .then(data => {
                 let result = '',
