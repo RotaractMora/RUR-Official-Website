@@ -12364,5 +12364,19 @@ textarea.form-control {
 }
 
 .sm-logo{
-    min-width: 400px !important;
+    min-width: 400px !important;    
 }
+
+@media (min-width:1025px){
+    .pulse{
+        margin-top: -44px;
+    }
+   
+}
+@media (max-width:641px) {
+
+    .mobile-top{
+        margin-top: 60px !important;
+    }
+}
+
